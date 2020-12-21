@@ -60,11 +60,9 @@ export class ContatosComponent implements OnInit {
   }
 
   adicionar(n: HTMLInputElement , e: HTMLInputElement, t: HTMLInputElement, a: HTMLInputElement): void {
-    console.log([n.value, e.value, t.value, a.value]);
     if (n.value != "" && e.value != "" && t.value != "" && a.value != "") {
       let novo = [n.value, e.value, t.value, a.value]
       this.contatos.push(novo)
-      console.log(this.contatos);
       this.quantContatos = this.contatos.length;
     }
   }
