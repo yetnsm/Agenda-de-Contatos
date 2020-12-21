@@ -32,8 +32,8 @@
     <input type="button" class="btn btn-primary" value="Adicionar" (click)="adicionar(n, e, t, a)" />
   </form>
 
-  <div class="titulo">Contatos da Agenda</div>
-  <table class="table" [class.contatos]="quantContatos > 0">
+  <div class="titulo" *ngIf="quantContatos > 0">Contatos da Agenda</div>
+  <table class="table" [class.contatos]="quantContatos > 0" *ngIf="quantContatos > 0">
     <thead>
       <tr>
         <th scope="col">Nome</th>
